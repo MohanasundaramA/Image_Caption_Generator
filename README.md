@@ -5,4 +5,4 @@ This assignment aims to describe the content of an image by using CNNs and RNNs 
 
 ## Architecture
 The model architecture consists of a CNN which extracts the features and encodes the input image and a Recurrent Neural Network (RNN) based on Long Short Term Memory (LSTM) layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
-![alt text](https://github.com/[MohanasundaramA]/[Image/Caption/Generator]/blob/[doc]/decoder.png?raw=true
+![alt text](https://github.com/[MohanasundaramA]/[Image_Caption_Generator]/blob/[doc]/decoder.png?raw=true
