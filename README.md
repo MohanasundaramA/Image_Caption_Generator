@@ -41,7 +41,7 @@ The Flickr_8K dataset is used for the model training of image caption generators
 
 
 ## Model
-![model](https://user-images.githubusercontent.com/117024021/211224971-6cfa9244-76db-4a01-80ae-f36351f5b83d.png|width = 70%)
+![model](https://user-images.githubusercontent.com/117024021/211224971-6cfa9244-76db-4a01-80ae-f36351f5b83d.png|width = 70px)
 
 
 ## Results
