@@ -1,7 +1,7 @@
 # Image Caption Generator
 
-## Introduction
-This project aims to describe the context of an image by using CNNs and RNNs to build an Image Caption Generator. The model would be based on the paper [4] and it will be implemented using Tensorflow and Keras. The dataset used is Flickr 8K, consisting of 8,000 images each one paired with five different captions to provide clear descriptions. The implementation has been done using Python in a Jupyter notebook, where every step is carefully documented.
+## Abstract
+Image caption generator is a process of recognizing the context of an image and annotating it with relevant captions using deep learning, and computer vision. It includes the labeling of an image with English keywords with the help of datasets provided during model training. Imagenet dataset is used to train the CNN model called VGG16 and Xception. These two models are used for image feature extraction. These extracted features will be fed to the LSTM model which in turn generates the image caption.
 
 ## Architecture
 The model architecture consists of a CNN which extracts the features and encodes the input image and a Recurrent Neural Network (RNN) based on Long Short Term Memory (LSTM) layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
