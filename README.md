@@ -1,12 +1,12 @@
 # **Image Caption Generator**
 
 ## Abstract
-Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning, and computer vision. It includes the labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and Xception. These two models are used for image feature extraction. These extracted features will be fed to the LSTM model, which in turn generates the image caption.
+Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. It includes labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and Xception. These two models are used for image feature extraction. The extracted features will be fed to the LSTM model, which in turn generates the image caption.
 
 
 ## Model Architecture
-The model architecture consists of 2 CNN models that extracts the features and encodes the input image and a Recurrent Neural Network (RNN) based on Long Short Term Memory (LSTM) layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
-- We remove the last layer of Xception network
+The model architecture consists of a CNN(VGG16 or Xception) that extracts the features and encodes the input image and a RNN based on LSTM layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
+- We remove the last layer of VGG or Xception network
 - Image is fed into this modified network to generate a 2048 length encoding corresponding to it
 - The 2048 length vector is then fed into a second neural network along with a caption for the image (while training)
 - This second network consists of an LSTM which tries to generate a caption for the image
