@@ -4,6 +4,7 @@
 Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning, and computer vision. It includes the labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and Xception. These two models are used for image feature extraction. These extracted features will be fed to the LSTM model, which in turn generates the image caption.
 
 
+
 ## Model Architecture
 The model architecture consists of 2 CNN models that extracts the features and encodes the input image and a Recurrent Neural Network (RNN) based on Long Short Term Memory (LSTM) layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
 - We remove the last layer of Xception network
