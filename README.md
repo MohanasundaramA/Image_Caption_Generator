@@ -14,7 +14,7 @@ The model architecture consists of a CNN(VGG16 or Xception) that extracts the fe
 <img width="70%" alt="decoder" src="https://user-images.githubusercontent.com/117024021/211224924-f84e80e8-d8d3-4c07-be1a-0e868f7b2883.png">
 
 
-## Required libraries
+## Requirements
 - Python - 3.6.7
 - Numpy - 1.16.4
 - Tensorflow - 1.13.1
