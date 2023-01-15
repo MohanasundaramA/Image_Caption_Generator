@@ -31,7 +31,6 @@ The Flickr_8K dataset is used for the model training of image caption generators
 - [Flickr_8k_text](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
 
 ## Files used
-[Drive link](https://drive.google.com/drive/folders/1jC2lha4tKoD6UI9MKCKYAEisCsHs9fHj?usp=share_link)
 - flickr8k_dataset - Dataset folder containing 8091 images.
 - flicker8k_text - Dataset folder containing image captions and text files.
 - description.txt - Text file containing all image names and their captions after preprocessing
@@ -42,6 +41,9 @@ The Flickr_8K dataset is used for the model training of image caption generators
 
 - /xception/features_vgg.pkl Pickle an object containing an image and its feature vector from the XCeption pre-trained CNN model
 - /xception/best_model.h5 -  H5 file which contains our trained model
+
+You can download all the files from the below drive link
+[Drive link](https://drive.google.com/drive/folders/1jC2lha4tKoD6UI9MKCKYAEisCsHs9fHj?usp=share_link)
 
 
 ## Flow of the project
