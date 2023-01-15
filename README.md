@@ -1,12 +1,12 @@
 # **Image Caption Generator**
 
 ## Abstract
-Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. It includes labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and Xception. These two models are used for image feature extraction. The extracted features will be fed to the LSTM model, which in turn generates the image caption.
+Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. It includes labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and XCeption. These two models are used for image feature extraction. The extracted features will be fed to the LSTM model, which in turn generates the image caption.
 
 
 ## Model Architecture
-The model architecture consists of a CNN(VGG16 or Xception) that extracts the features and encodes the input image and a RNN based on LSTM layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
-- We remove the last layer of VGG or Xception network
+The model architecture consists of a CNN(VGG16 or XCeption) that extracts the features and encodes the input image and a RNN based on LSTM layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
+- We remove the last layer of VGG or XCeption network
 - Image is fed into this modified network to generate a 2048 length encoding corresponding to it
 - The 2048 length vector is then fed into a second neural network along with a caption for the image (while training)
 - This second network consists of an LSTM which tries to generate a caption for the image
@@ -43,11 +43,12 @@ The Flickr_8K dataset is used for the model training of image caption generators
 - /xception/best_model.h5 -  H5 file which contains our trained model
 
 You can download all the files from the below drive link
+
 [Drive link](https://drive.google.com/drive/folders/1jC2lha4tKoD6UI9MKCKYAEisCsHs9fHj?usp=share_link)
 
 
 ## Flow of the project
-1. Extracting features from images using VGG-16 and Xception
+1. Extracting features from images using VGG-16 and XCeption
 2. Cleaning the caption data
 3. Merging the captions and images
 4. Building LSTM model for training
@@ -67,7 +68,7 @@ You can download all the files from the below drive link
 - BLEU-4:  13%
 
 
-### Using Xception model:
+### Using XCeption model:
 - BLEU-1:  72%
 - BLEU-2:  36%
 - BLEU-3:  25%
