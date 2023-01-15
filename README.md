@@ -25,10 +25,23 @@ The model architecture consists of a CNN(VGG16 or Xception) that extracts the fe
 
 
 ## Dataset
-The Flickr_8K dataset is used for the model training of image caption generators. The dataset can be downloaded directly from the below links. This dataset includes around 8000 images along with 5 different captions written by different people for each image. The most important file is Flickr 8k.token, which stores all the image names with their captions, respectively. 8091 images are stored inside the Flickr8k_Dataset folder, and the text files with captions for the images are stored in the Flickr8k_text folder.
+The Flickr_8K dataset is used for the model training of image caption generators. The dataset can be downloaded directly from the below links. This dataset includes around 8091 images along with 5 different captions written by different people for each image. The most important file is Flickr 8k.token, which stores all the image names with their captions, respectively. 8091 images are stored inside the Flickr8k_Dataset folder, and the text files with captions for the images are stored in the Flickr8k_text folder.
 
 - [Flicker8k_Dataset](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
 - [Flickr_8k_text](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
+
+## Files used
+[Drive link](https://drive.google.com/drive/folders/1jC2lha4tKoD6UI9MKCKYAEisCsHs9fHj?usp=share_link)
+- flickr8k_dataset - Dataset folder containing 8091 images.
+- flicker8k_text - Dataset folder containing image captions and text files.
+- description.txt - Text file containing all image names and their captions after preprocessing
+- model.png - Visual representation of the dimensions of our project
+
+- /vgg16/features_vgg.pkl - Pickle object containing an image and its feature vector from the VGG16 pre-trained CNN model
+- /vgg16/best_model.h5 -  H5 file which contains our trained model
+
+- /xception/features_vgg.pkl Pickle an object containing an image and its feature vector from the XCeption pre-trained CNN model
+- /xception/best_model.h5 -  H5 file which contains our trained model
 
 
 ## Flow of the project
