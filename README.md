@@ -1,7 +1,7 @@
 # **Image Caption Generator**
 
 ## Abstract
-Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. The project's main goal is to use the available datasets to label images with English keywords. The CNN models (VGG16 and XCeption) trained using the ImageNet dataset are used to extract visual data, and an LSTM model will take the extracted attributes and produce the image descriptions.
+Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision.The project's main objective is to label images with English keywords using the datasets available. The CNN models (VGG16 and XCeption) trained using the ImageNet dataset are used to extract visual data, and an LSTM model will take the extracted attributes and produce the image descriptions.
 
 
 ## Model Architecture
