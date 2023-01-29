@@ -25,7 +25,7 @@ The model architecture consists of a CNN (VGG16 or XCeption) that extracts the f
 
 
 ## Dataset
-The Flickr 8K dataset is used to train the model for this project. Direct download links for the dataset are provided below. Around 8091 photos and 5 unique captions—written by several authors for each image—are included in this collection. The most significant file is called Flickr 8k.token, and it contains all of the image names and captions. The Flickr8k Dataset folder contains 8091 pictures, while the Flickr8k Text folder has the text files that provide the pictures' captions.
+The Flickr 8K dataset is used to train the model for this project. Direct download links for the dataset are provided below. Around 8091 photos and 5 unique captions—written by several authors for each image—are included in this collection. The most significant file is the Flickr 8k.token, which contains all of the image names and captions. The Flickr8k Dataset folder contains 8091 pictures, while the Flickr8k Text folder has the text files that provide the pictures' captions.
 
 - [Flicker8k_Dataset](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
 - [Flickr_8k_text](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
