@@ -1,12 +1,11 @@
 # **Image Caption Generator**
 
 ## Abstract
-Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. It includes labelling of an image with English keywords with the help of datasets provided during model training. The Imagenet dataset is used to train the CNN model called VGG16 and XCeption. These two models are used for image feature extraction. The extracted features will be fed to the LSTM model, which in turn generates the image caption.
-
+Image caption generation is the technique of utilising deep learning and computer vision to recognise the context of an image and annotate it with pertinent captions. The main objective of the project is to label an image with English keywords using the available datasets. The Imagenet dataset is used to train the (VGG16 and XCeption) CNN models. The extraction of visual features uses these two models, and the LSTM model will receive the retrieved characteristics and provide the picture caption.
 
 ## Model Architecture
-The model architecture consists of a CNN(VGG16 or XCeption) that extracts the features and encodes the input image and a RNN based on LSTM layers. The most significant difference with other models is that the image embedding is provided as the first input to the RNN network and only once.
-- We remove the last layer of VGG or XCeption network
+The model architecture consists of a CNN (VGG16 or XCeption) that extracts the features and encodes the input picture, and an RNN built on LSTM layers. The primary distinction between this model and others is that the picture embedding is the sole input given to the RNN network.
+- The last layer of VGG or XCeption network is removed
 - Image is fed into this modified network to generate a 2048 length encoding corresponding to it
 - The 2048 length vector is then fed into a second neural network along with a caption for the image (while training)
 - This second network consists of an LSTM which tries to generate a caption for the image
@@ -25,24 +24,24 @@ The model architecture consists of a CNN(VGG16 or XCeption) that extracts the fe
 
 
 ## Dataset
-The Flickr_8K dataset is used for the model training of image caption generators. The dataset can be downloaded directly from the below links. This dataset includes around 8091 images along with 5 different captions written by different people for each image. The most important file is Flickr 8k.token, which stores all the image names with their captions, respectively. 8091 images are stored inside the Flickr8k_Dataset folder, and the text files with captions for the images are stored in the Flickr8k_text folder.
+The Flickr 8K dataset is used in the model training of image caption generator. Direct download links for the dataset are provided below. Around 8091 photos and 5 unique captions—written by several authors for each image—are included in this collection. The most significant file is called Flickr 8k.token, and it contains all of the image names and captions. The Flickr8k Dataset folder contains 8091 pictures, while the Flickr8k Text folder has the text files that provide the picture's captions.
 
 - [Flicker8k_Dataset](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
 - [Flickr_8k_text](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
 
 ## Files used
-- flickr8k_dataset - Dataset folder containing 8091 images.
-- flicker8k_text - Dataset folder containing image captions and text files.
-- description.txt - Text file containing all image names and their captions after preprocessing
-- model.png - Visual representation of the dimensions of our project
+- flickr8k dataset - dataset folder has 8091 images in it.
+- flicker8k text - dataset folder that houses text files and image descriptions.
+- description.txt -  text file that includes, upon preprocessing, the names of all the images and their captions.
+- model.png - A picture showing the size of our project.
 
-- /vgg16/features_vgg.pkl - Pickle object containing an image and its feature vector from the VGG16 pre-trained CNN model
+- /vgg16/features_vgg.pkl - pickle object contains image names and its feature vector from the VGG16 pre-trained CNN model
 - /vgg16/best_model.h5 -  H5 file which contains our trained model
 
-- /xception/features_vgg.pkl Pickle an object containing an image and its feature vector from the XCeption pre-trained CNN model
+- /xception/features_vgg.pkl - pickle an object contains image names and its feature vector from the XCeption pre-trained CNN model
 - /xception/best_model.h5 -  H5 file which contains our trained model
 
-You can download all the files from the below drive link
+All of the files are available for download via the drive URL below.
 
 [Drive link](https://drive.google.com/drive/folders/1jC2lha4tKoD6UI9MKCKYAEisCsHs9fHj?usp=share_link)
 
@@ -80,10 +79,11 @@ Here are some captions generated by this model:
 
 
 ## Applications
-- Some detailed use cases would be like a visually impaired person taking a picture from his phone and then the caption generator turning the caption into speech for him to understand.
-- Advertising industry is trying to generate captions automatically without the need to make them separately during production and sales.
-- Doctors can use this technology to find tumours or other defects in the images, or it can be used by people to understand geospatial images so they can find out more details about the terrain.
+Some specific use cases include:
+- A blind person shooting a picture with his phone and the caption generator translating the caption into voice so he can comprehend it.
+- The advertising sector is attempting to automate caption generation so that it does not need to create them independently throughout production and sales.
+- This technology may be used by doctors to identify tumours or other problems in the photos, or it can be used by anyone to compare geographical imagery and learn more specifics about the landscape.
 
 
 ## Conclusion
-Implementing the model is a time-consuming task, as it involved a lot of testing with different hyperparameters to generate better captions. The model generates good captions for the provided image, but it can always be improved.
+The model's implementation took a long time since it required extensive testing with various hyperparameters to provide better captions. Although the model produces quality captions for the given image, it can always be improved.
