@@ -1,16 +1,17 @@
 # **Image Caption Generator**
 
 ## Abstract
-Image caption generation is the technique of utilising deep learning and computer vision to recognise the context of an image and annotate it with pertinent captions. The main objective of the project is to label an image with English keywords using the available datasets. The Imagenet dataset is used to train the (VGG16 and XCeption) CNN models. The extraction of visual features uses these two models, and the LSTM model will receive the retrieved characteristics and provide the picture caption.
+Image caption generation is the process of recognising the context of an image and annotating it with relevant captions using deep learning and computer vision. The project's main goal is to use the available datasets to label images with English keywords. The CNN models (VGG16 and XCeption) trained using the ImageNet dataset are used to extract visual data, and an LSTM model will take the extracted attributes and produce the image descriptions.
+
 
 ## Model Architecture
 The model architecture consists of a CNN (VGG16 or XCeption) that extracts the features and encodes the input picture, and an RNN built on LSTM layers. The primary distinction between this model and others is that the picture embedding is the sole input given to the RNN network.
-- The last layer of VGG or XCeption network is removed
-- Image is fed into this modified network to generate a 2048 length encoding corresponding to it
-- The 2048 length vector is then fed into a second neural network along with a caption for the image (while training)
-- This second network consists of an LSTM which tries to generate a caption for the image
+- The last layer of the CNN model (VGG/XCeption) network is removed
+- Image is fed into this modified network to generate a 2048-length encoding corresponding to it
+- The 2048-length vector is then fed into a second neural network along with a caption for the image (while training)
+- This second network consists of an LSTM that will generate a caption for the given image
 
-<img width="70%" alt="decoder" src="https://user-images.githubusercontent.com/117024021/211224924-f84e80e8-d8d3-4c07-be1a-0e868f7b2883.png">
+<img width="70%" height= "70%" alt="decoder" src="https://user-images.githubusercontent.com/117024021/211224924-f84e80e8-d8d3-4c07-be1a-0e868f7b2883.png">
 
 
 ## Requirements
@@ -24,22 +25,23 @@ The model architecture consists of a CNN (VGG16 or XCeption) that extracts the f
 
 
 ## Dataset
-The Flickr 8K dataset is used in the model training of image caption generator. Direct download links for the dataset are provided below. Around 8091 photos and 5 unique captions—written by several authors for each image—are included in this collection. The most significant file is called Flickr 8k.token, and it contains all of the image names and captions. The Flickr8k Dataset folder contains 8091 pictures, while the Flickr8k Text folder has the text files that provide the picture's captions.
+The Flickr 8K dataset is used to train the model for this project. Direct download links for the dataset are provided below. Around 8091 photos and 5 unique captions—written by several authors for each image—are included in this collection. The most significant file is called Flickr 8k.token, and it contains all of the image names and captions. The Flickr8k Dataset folder contains 8091 pictures, while the Flickr8k Text folder has the text files that provide the pictures' captions.
 
 - [Flicker8k_Dataset](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
 - [Flickr_8k_text](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
 
+
 ## Files used
-- flickr8k dataset - dataset folder has 8091 images in it.
+- flickr8k dataset - dataset folder that has 8091 images in it.
 - flicker8k text - dataset folder that houses text files and image descriptions.
-- description.txt -  text file that includes, upon preprocessing, the names of all the images and their captions.
-- model.png - A picture showing the size of our project.
+- description.txt - a text file that contains the names of all the images and their captions after preprocessing
+- model.png - Visual representation of the dimensions of our project
 
 - /vgg16/features_vgg.pkl - pickle object contains image names and its feature vector from the VGG16 pre-trained CNN model
-- /vgg16/best_model.h5 -  H5 file which contains our trained model
+- /vgg16/best_model.h5 - h5 file containing our trained LSTM model, which utilises VGG16 for feature extraction
 
 - /xception/features_vgg.pkl - pickle an object contains image names and its feature vector from the XCeption pre-trained CNN model
-- /xception/best_model.h5 -  H5 file which contains our trained model
+- /xception/best_model.h5 -  h5 file containing our trained LSTM model, which utilises XCeption for feature extraction
 
 All of the files are available for download via the drive URL below.
 
@@ -56,7 +58,7 @@ All of the files are available for download via the drive URL below.
 
 
 ## Model
-<img width="70%" alt="model" src="https://user-images.githubusercontent.com/117024021/211224971-6cfa9244-76db-4a01-80ae-f36351f5b83d.png">
+<img width="70%" height="70%" alt="model" src="https://user-images.githubusercontent.com/117024021/211224971-6cfa9244-76db-4a01-80ae-f36351f5b83d.png">
 
 
 ## Results
